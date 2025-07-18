@@ -1,169 +1,154 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breve Beats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fed301;
+      color: #cf4006;
+    }
+    .header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      background-image: url('breve-beats-hero.png');
+    }
+    .header-text {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 2.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .content {
+      background-color: #07afcc;
+      padding: 2rem;
+      text-align: center;
+      color: #fed301;
+    }
+    .section {
+      max-width: 800px;
+      margin: 1rem auto;
+      padding: 1rem;
+      text-align: center;
+      background-color: #fed301;
+      color: #cf4006;
+      border-radius: 10px;
+    }
+    .section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #cf4006;
+    }
+    .section ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      text-align: left;
+      display: inline-block;
+    }
+    .section ul li {
+      color: #cf4006;
+      margin-bottom: 0.5rem;
+    }
+    .footer {
+      background-color: #cf4006;
+      color: #fed301;
+      text-align: center;
+      padding: 1rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #cf4006;
+      color: #fed301;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #a73205;
+    }
+    iframe {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .content h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: #fed301;
+      margin-bottom: 1rem;
+    }
+    .content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 1rem auto;
+    }
+    a {
+      color: #fed301;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .section a {
+      color: #cf4006;
+    }
+    .section a:hover {
+      color: #07afcc;
+    }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Breve Beats&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #fed301;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #cf4006;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.header {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: relative;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>height: 100vh;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-attachment: fixed;
-                                                               background-size: cover;
-                                                               background-position: center;
-                                                               background-image: url('breve-beats-hero.png');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.header-text {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>position: absolute;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>top: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>left: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 800;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #07afcc;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #fed301;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 800px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 1rem auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #fed301;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #cf4006;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section h2 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #cf4006;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section ul {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>list-style-type: disc;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-left: 1.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: left;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section ul li {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #cf4006;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.footer {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #cf4006;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #fed301;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem 2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #cf4006;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #fed301;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>transition: background-color 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.button:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background-color: #a73205;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>iframe {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 2rem auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content h2 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: 'Montserrat', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 2.5rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #fed301;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.content p {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.2rem;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>line-height: 1.6;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 600px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto 1rem auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #fed301;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-decoration: underline;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section a {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #cf4006;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.section a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #07afcc;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header-text"&gt;Breve Beats - Curated for the Culture&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Daytime DJ Vibes for Coffee Lovers&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Music that pairs perfectly with your pour-over. Book Breve Beats for coffee shop sets, brunch lounges, and daytime pop-ups.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;a href="mailto:bookings@brevebeats.com" class="button"&gt;Book a Set&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;iframe width="600" height="166" scrolling="no" frameborder="no" allow="autoplay"</p>
-<p class="p1"><span class="Apple-converted-space">    </span>src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/soundcloud/lord-pyro-dj-set-pluto-part-1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/iframe&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Why Choose Breve Beats?&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;Professional DJ with over 15 years experience&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;Curated playlists tailored to your space and crowd&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;All equipment provided&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;li&gt;Flexible scheduling and venue consultation&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="section"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Contact&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Email: &lt;a href="mailto:bookings@brevebeats.com"&gt;bookings@brevebeats.com&lt;/a&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;Instagram: &lt;a href="https://www.instagram.com/brevebeats" target="_blank"&gt;@brevebeats&lt;/a&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;&amp;copy; 2025 Breve Beats. All rights reserved.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <div class="header">
+    <div class="header-text">Breve Beats - Curated for the Culture</div>
+  </div>
+  <div class="content">
+    <h2>Daytime DJ Vibes for Coffee Lovers</h2>
+    <p>Music that pairs perfectly with your pour-over. Book Breve Beats for coffee shop sets, brunch lounges, and daytime pop-ups.</p>
+    <a href="mailto:bookings@brevebeats.com" class="button">Book a Set</a>
+  </div>
+  <iframe width="600" height="166" scrolling="no" frameborder="no" allow="autoplay"
+    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/soundcloud/lord-pyro-dj-set-pluto-part-1">
+  </iframe>
+  <div class="section">
+    <h2>Why Choose Breve Beats?</h2>
+    <ul>
+      <li>Professional DJ with over 15 years experience</li>
+      <li>Curated playlists tailored to your space and crowd</li>
+      <li>All equipment provided</li>
+      <li>Flexible scheduling and venue consultation</li>
+    </ul>
+  </div>
+  <div class="section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:bookings@brevebeats.com">bookings@brevebeats.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/brevebeats" target="_blank">@brevebeats</a></p>
+  </div>
+  <div class="footer">
+    <p>&copy; 2025 Breve Beats. All rights reserved.</p>
+  </div>
 </body>
 </html>
