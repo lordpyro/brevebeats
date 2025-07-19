@@ -120,12 +120,79 @@
       color: #07afcc;
     }
     
+    /* Email Signup Styles */
+    .email-signup {
+      display: flex;
+      gap: 0.5rem;
+      max-width: 400px;
+      margin: 1rem auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .email-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.8rem 1rem;
+      border: 2px solid #cf4006;
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      color: #cf4006;
+      background-color: white;
+    }
+    
+    .email-input:focus {
+      outline: none;
+      border-color: #07afcc;
+      box-shadow: 0 0 0 2px rgba(7, 175, 204, 0.2);
+    }
+    
+    .email-button {
+      padding: 0.8rem 1.5rem;
+      background-color: #cf4006;
+      color: #fed301;
+      border: none;
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .email-button:hover {
+      background-color: #a73205;
+    }
+    
+    .email-message {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      font-weight: 500;
+      display: none;
+    }
+    
+    .email-message.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      display: block;
+    }
+    
+    .email-message.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      display: block;
+    }
+    
     /* Mobile Responsive Styles */
     @media (max-width: 768px) {
       .header {
         height: 50vh;
         background-size: contain;
-        background-position: center 30%;
+        background-position: center center;
       }
       
       .header-text {
@@ -189,6 +256,24 @@
       .footer {
         padding: 1.5rem 1rem;
         font-size: 0.9rem;
+      }
+      
+      /* Mobile Email Signup */
+      .email-signup {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .email-input {
+        width: 100%;
+        max-width: 280px;
+        min-width: auto;
+      }
+      
+      .email-button {
+        width: 100%;
+        max-width: 280px;
       }
     }
     
@@ -281,6 +366,15 @@
   <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2119335171&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
     <a href="https://soundcloud.com/lordpyro" title="Lord Pyro" target="_blank" style="color: #cccccc; text-decoration: none;">Lord Pyro</a> · <a href="https://soundcloud.com/lordpyro/breve-beats-volume-2" title="Breve Beats Mini Mix Volume 2" target="_blank" style="color: #cccccc; text-decoration: none;">Breve Beats Mini Mix Volume 2</a></div>
   <div class="section">
+    <h2>Stay in the Loop</h2>
+    <p>Get notified about upcoming sets, new mixes, and exclusive content.</p>
+    <div class="email-signup">
+      <input type="email" placeholder="Enter your email address" class="email-input" required>
+      <button type="button" class="email-button" onclick="submitEmail()">Join the List</button>
+    </div>
+    <div id="email-message" class="email-message"></div>
+  </div>
+  <div class="section">
     <h2>Why Choose Breve Beats?</h2>
     <ul>
       <li>Professional DJ with over 15 years experience</li>
@@ -297,5 +391,61 @@
   <div class="footer">
     <p>&copy; 2025 Breve Beats. All rights reserved.</p>
   </div>
+  
+  <script>
+    function submitEmail() {
+      const emailInput = document.querySelector('.email-input');
+      const messageDiv = document.getElementById('email-message');
+      const email = emailInput.value.trim();
+      
+      // Simple email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      if (!email) {
+        showMessage('Please enter your email address.', 'error');
+        return;
+      }
+      
+      if (!emailRegex.test(email)) {
+        showMessage('Please enter a valid email address.', 'error');
+        return;
+      }
+      
+      // Send to ConvertKit
+const formData = new FormData();
+formData.append('email', email);
+
+fetch('<script async data-uid="c5e53d051a" src="https://the-dj-bizkit.kit.com/c5e53d051a/index.js"></script>', {
+  method: 'POST',
+  body: formData,
+  mode: 'no-cors'
+})
+.then(() => {
+  showMessage('Thanks for joining! We\'ll keep you updated on new sets and mixes.', 'success');
+  emailInput.value = '';
+})
+.catch(() => {
+  showMessage('Something went wrong. Please try again.', 'error');
+});
+    }
+    
+    function showMessage(text, type) {
+      const messageDiv = document.getElementById('email-message');
+      messageDiv.textContent = text;
+      messageDiv.className = `email-message ${type}`;
+      
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        messageDiv.style.display = 'none';
+      }, 5000);
+    }
+    
+    // Allow Enter key to submit
+    document.querySelector('.email-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        submitEmail();
+      }
+    });
+  </script>
 </body>
 </html>
