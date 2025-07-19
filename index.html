@@ -411,11 +411,11 @@
         return;
       }
       
-      // Send to ConvertKit
+      // Send to Mailchimp
 const formData = new FormData();
-formData.append('email', email);
+formData.append('EMAIL', email);  // Use the name from step 2
 
-fetch('<script async data-uid="c5e53d051a" src="https://the-dj-bizkit.kit.com/c5e53d051a/index.js"></script>', {
+fetch('https://gmail.us11.list-manage.com/subscribe/post?u=4901befbae79d2bd72bf5f2c2&amp;id=18bb8419d9&amp;f_id=006333e0f0', {  // URL from step 1
   method: 'POST',
   body: formData,
   mode: 'no-cors'
